@@ -1,0 +1,446 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+// bower:scss
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+/*CSS RESET*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*END CSS RESET*/
+
+
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+body {
+  padding: 0;
+
+ background:url(/images/pattern.svg)repeat, black;
+  
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Custom page header */
+.header {
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 10px;
+
+  /* Make the masthead heading the same height as the navigation */
+  h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 40px;
+    padding-bottom: 19px;
+  }
+}
+
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+
+  .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+  }
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0;
+
+  p + h4 {
+    margin-top: 28px;
+  }
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
+
+
+/*RAW CSS BEFORE RESPONSIVE*/
+
+#deskMain {
+  #deskFirstDiv {
+    height:100vh;
+    
+    padding:0;
+    color:white;
+     background:url(/images/nyc2.jpg) no-repeat;
+     background-size:100% 100%;
+      
+
+    #deskPattern {
+     background:url(/images/pattern.svg)repeat;
+      height:100%;
+     
+
+
+      #deskLogo {
+     background: url(/images/titleLogo.png) no-repeat;
+background-size: 100% 100%;
+height: 84%;
+position: relative;
+top: 8%;
+left: 2%;
+      }
+
+      #deskText {
+       
+        height:100%;
+        padding:0;
+
+        #deskMainText {
+          position:relative;
+          height:100%;
+          top:60%;  
+          padding:0;
+
+        #deskName {
+          background:url(/images/titleName.png)no-repeat;
+          background-size:100% 100%;
+          height:7%;
+          float:right;
+          margin-bottom:2%; 
+              
+        }
+
+        #deskPosition{
+          background:url(/images/titlePosition.png)no-repeat;
+          background-size:100% 100%;
+          height:4%;
+          float:right;
+        }
+
+        }
+      }
+
+
+    }
+
+
+  }
+  #deskSecondDiv{
+    height:50vh;
+    background:white;
+
+    #deskAbout{
+      padding:1%;
+      
+      background:white;
+      height:100%;
+
+      #deskAboutTitle {
+        font-size:2.0em;
+
+      }
+
+      #deskAboutTitle {
+        border:1px solid black;
+      }
+
+    }
+  }
+  #deskThirdDiv{
+    height:60vh;
+   
+      
+    color:white;
+
+
+    #deskSkillExp {
+      border:1px solid white;
+      height:100%;
+      background:black;
+      padding:2%;
+
+      #expSwap {
+        border:1px solid black;
+        margin-bottom:2%;
+        font-size:2.2em;
+
+        .expSwapClass {
+          color:white;
+          text-align:center;
+        
+          &:hover{
+            background:white;
+            color:black;
+          }
+
+        }
+      }
+
+      #deskSkills {
+        border:1px solid white;
+        padding:3%;
+
+        .deskSkill {
+          height:10vh;
+          border:1px solid white;
+
+          .expBarName {
+            border-bottom:1px solid white;
+            margin-bottom:2%;
+          }
+
+          .expBarOut {
+            padding:0;
+            background:white;
+            border:1px solid white;
+            height:2.5vh;
+
+            .expBarInner {
+              height:100%;
+              background:black;
+              
+            }
+
+          }
+        }
+
+      }
+
+     #deskExp {
+      height:80%;
+
+       #deskExps {
+        border:1px solid white;
+        height:100%;
+
+
+        .workOut {
+          border:1px solid white;
+          height:100%;
+          padding:1%;
+          padding-top:4%;
+
+          #workName{
+            border-bottom:1px solid white;
+            margin-bottom:2%;
+            font-size:2em;
+            font-weight:bolder;
+          }
+
+          #workPosition{
+            margin-bottom:1%;
+            font-size:1.6em;
+          }
+
+
+          #workDates {
+            margin-bottom:3%;
+            padding:0;
+
+            .workDate {
+              font-size:1.2em;
+            }
+          }
+
+          #workResp {
+            padding:1%;
+
+              #workRespon {
+                margin-bottom:2%;
+              }
+
+
+          }
+
+        }
+
+
+      }
+
+
+     }
+
+
+
+
+    }
+  }
+  #deskFourthDiv {
+    height:50vh;
+    background:white;
+
+    #deskProject {
+      border:1px solid black;
+      height:100%;
+      background:white;
+
+     #deskProjectHead {
+        padding:1%;
+       #deskProjectHeader {
+        border-bottom:1px solid black;
+        font-size:2.2em;
+      }
+
+     }
+
+      .projectMenu {
+        
+        display:inline;
+        font-size:1.2em;
+        cursor:pointer;
+        
+        text-align:center;
+        padding:1%;
+       ;
+        &:hover{
+          color:white;
+          background:black;
+        }
+      }
+
+
+      #deskProjectContent {
+
+        #projectContentName{
+          font-size:2.0em;
+          font-weight:bold;
+          padding:1%;
+          text-align:center;
+        }
+        #projectContentLink{
+          color:black;
+          font-size:2.0em;
+          padding:1%;
+
+          #projectContentLinkContent{
+            
+          }
+
+          #projectContentLinkContent:hover{
+            text-decoration:none;
+            background:black;
+            color:white;
+            height:100%;
+
+          }
+        }
+
+        #projectContentText {
+          border-top:1px solid black;
+
+
+          .innerText{
+            font-size:1.4em;
+            
+            line-height:1.2;
+
+          }
+        }
+
+
+      }
+
+
+    }
+
+
+  }
+
+  #deskFifthDiv {
+    height:50vh;
+     
+    
+
+
+    #deskContact {
+      height:100%;
+      background:black;
+    }
+
+  }
+}

@@ -1,0 +1,209 @@
+<div id=''class=''style=''>
+
+  <!-- DESKTOP -->
+  <div id='deskMain'class='hidden-sm hidden-xs col-md-12 col-lg-12'style='padding:0;'>
+     <div id='deskFirstDiv'class='col-md-12 col-lg-12'style=''>
+      <div id='deskPattern'class='col-md-12 col-lg-12'style=''>
+        
+        <div id='deskLogo'class='col-md-8 col-lg-8'style=''>
+        
+        
+        </div>
+        <div id='deskText'class='col-md-4 col-lg-4'style=''>
+          <div id='deskMainText'class='col-md-12 col-lg-12'style=''>
+              <div id='deskName'class='col-md-10 col-lg-10'style=''>
+          
+          
+          </div>
+          <div id='deskPosition'class='col-md-8 col-lg-8'style=''>
+          
+          
+          </div>
+          
+          </div>
+        
+        </div>
+      
+      </div>
+     
+     </div>
+     <div id='deskSecondDiv'class='col-md-12 col-lg-12'style=''>
+          <div id='deskAbout'class='col-md-10 col-lg-10 col-md-offset-1'style=''>
+            
+            <div id='deskAboutContent'class='col-md-10 col-lg-10'style=''>
+            Blah blah blah blah blah
+            
+            </div>
+            <div id='deskAboutTitle'class='col-md-2 col-lg-2'style=''>
+            About Me
+            
+            </div>
+          
+          </div>
+     
+     </div>
+     <div id='deskThirdDiv'class='col-md-12 col-lg-12'style=''>
+        <div ng-init='skillSwap = false;'id='deskSkillExp'class='col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1'style=''>
+            
+            <div id='expSwap'class='col-md-12 col-lg-12'style=''>
+                <div id=''class='col-md-6 col-lg-6 expSwapClass'style=''ng-click='skillSwap = false'>
+                    Skills
+                
+                </div>
+                <div id=''class='col-md-6 col-lg-6 expSwapClass'style=''ng-click='skillSwap = true'>
+                  Experience
+                
+                </div>
+            
+            </div>
+
+            <div ng-if='skillSwap == false'id='deskSkills'class='col-md-12 col-lg-12'style=''>
+                <div ng-repeat='skill in skills' id=''class='col-md-6 col-lg-6  deskSkill'style=''>
+                  <span class=' col-md-12 col-lg-12'><span class='expBarName col-md-4 col-lg-4'>{{skill.name}}</span></span>
+                  <span class='expBarOut col-md-12 col-lg-12'>
+                      <span class='expBarInner col-md-12 col-lg-12'style='width:{{skill.level}}%;'></span>
+
+
+                  </span>
+                  
+
+
+                </div>
+                
+        
+            </div>
+            <div ng-if='skillSwap == true'id='deskExp'class='col-md-12 col-lg-12'style=''>
+
+              <div id='deskExps'class='col-md-4 col-lg-4'style=''ng-repeat='work in workHist'>
+                  <div id=''class='col-md-offset-1 col-lg-offset-1 col-md-10 col-lg-10 workOut'style=''>
+                   
+                      <div id='workName'class='col-md-12 col-lg-12'style=''>
+                        {{work.name}}
+                      
+                      </div>
+
+                      <div id='workPosition'class='col-md-12 col-lg-12'style=''>
+                        {{work.position}}
+                      
+                      </div>
+                      <div id='workDates'class='col-md-12 col-lg-12'style=''>
+                        <div ng-if='work.present == true' id=''class='col-md-12 col-lg-12 workDate'style=''>
+                         {{work.startDate}} - Present
+                        
+                        </div>
+                        <div ng-if='work.present == false' id=''class='col-md-12 col-lg-12 workDate'style=''>
+                        {{work.startDate}} - {{work.endDate}}
+                        
+                        </div>
+                      
+                      </div>
+                      <div id='workResp'class='col-md-12 col-lg-12'style=''>
+                        <div ng-repeat='respon in work.respon'id='workRespon'class='col-md-12 col-lg-12'style=''>
+                          {{respon}}
+                        
+                        
+                        </div>
+                      
+                      </div>
+
+                  
+                  </div>
+
+                               
+              
+              </div>
+
+        
+        
+            </div>
+
+
+        
+        </div>
+        
+     
+     </div>
+     <div id='deskFourthDiv'class='col-md-12 col-lg-12'style=''>
+        <div id='deskProject'class='col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1'style=''>
+           <div id='deskProjectHead'class='col-md-12 col-lg-12'style=''>
+              <div id='deskProjectHeader'class='col-md-3 col-lg-3'style=''>
+              Projects
+              
+              </div>
+        
+            </div>
+           <div id=''class='col-md-9 col-lg-9 col-md-offset-3 col-lg-offset-3'style=''>
+
+             <div ng-repeat='project in projects'id=''class='col-md-2 col-lg-2 projectMenu'style=''ng-click='changeSwap(project)'>
+            {{project.name}}
+            
+            
+            </div>
+           
+           </div>
+
+           <div ng-init=''id='deskProjectContent'class='col-md-12 col-lg-12'style=''>
+                <div id=''class='col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1'style=''>
+                    <div id='projectContentName'class='col-md-6 col-lg-6'style=''>
+                    {{pro.name}}
+                    
+                    </div>
+                    <a ng-href='{{pro.web}}'id='projectContentLink'class='col-md-6 col-lg-6'style=''>
+                      <div id='projectContentLinkContent'class='col-md-6 col-lg-6'style=''>
+                      Check It Out Here
+                      
+                      </div>
+                    
+                    </a>
+
+                    <div id='projectContentText'class='col-md-12 col-lg-12'style=''>
+                      <div ng-repeat='desc in pro.descs'id=''class='col-md-4 col-lg-4 innerText'style=''>
+                        <div id=''class='col-md-9 col-lg-9'style=''>
+                           {{desc}}
+                        
+                        </div>
+                        
+                      
+                      </div>
+                    
+                    </div>
+
+
+                  
+                </div>
+
+
+           
+           </div>
+
+        
+        
+        </div>
+     
+     </div>
+     <div id='deskFifthDiv'class='col-md-12 col-lg-12'style=''>
+        <div id='deskContact'class='col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1'style=''>
+            <div id=''class='col-md-12 col-lg-12'style=''>
+              <div id=''class='col-md-12 col-lg-12'style=''>
+                
+              
+              </div>
+
+
+            
+            </div>
+           
+        
+        </div>
+     
+     </div>
+  </div>
+
+  <!-- MOBILE -->
+  <div id=''class='hidden-md hidden-lg'style=''>
+  
+  
+  </div>
+
+
+</div>
