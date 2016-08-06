@@ -222,13 +222,13 @@ left: 2%;
 
   }
   #deskSecondDiv{
-    height:50vh;
-    background:#FFF9F8;
+    height:40vh;
+    background:white;
 
     #deskAbout{
       padding:1%;
       
-      background:#FFF9F8;
+      background:white;
       height:100%;
 
       #deskAboutTitle {
@@ -241,6 +241,8 @@ left: 2%;
 
          #deskAboutAbout {
             border-bottom:3px solid black;
+            font-size:2.0em;
+
             
          }
 
@@ -250,6 +252,21 @@ left: 2%;
           height:80%;
           opacity: 0.9;
          }
+      }
+
+      #deskAboutContent {
+        font-family:$robo;
+        
+        line-height:1.2;
+
+        #name{
+          border-bottom:3px solid black;
+          font-family:$fran;
+          font-size:3.3em;
+        }
+        #content{
+          font-size:1.3em;
+        }
       }
 
     }
@@ -272,14 +289,21 @@ left: 2%;
         margin-bottom:2%;
         font-size:2.2em;
         font-family: $fran;
+        padding:0;
+
+        background:black;
+
+
 
         .expSwapClass {
           
           text-align:center;
           border:3px solid white;
+
+
         
           &:hover{
-            background:#FFF9F8;
+            background:white;
             color:black;
             cursor:pointer;
           }
@@ -299,20 +323,26 @@ left: 2%;
           font-weight:bold;
 
           .expBarName {
-            border-bottom:1px solid white;
+            border-bottom:3px solid white;
             margin-bottom:2%;
           }
 
           .expBarOut {
             padding:0;
             background:white;
-            border:1px solid white;
+            border:3px solid white;
             height:2.5vh;
 
             .expBarInner {
               height:100%;
-              background:black;
               
+/*GRADIENT*/
+
+background: #4c4c4c; /* Old browsers */
+background: -moz-linear-gradient(top, #4c4c4c 0%, #595959 12%, #666666 25%, #474747 39%, #2c2c2c 50%, #000000 51%, #111111 60%, #2b2b2b 76%, #1c1c1c 91%, #131313 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #4c4c4c 0%,#595959 12%,#666666 25%,#474747 39%,#2c2c2c 50%,#000000 51%,#111111 60%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #4c4c4c 0%,#595959 12%,#666666 25%,#474747 39%,#2c2c2c 50%,#000000 51%,#111111 60%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313',GradientType=0 ); /* IE6-9 */
             }
 
           }
@@ -384,7 +414,7 @@ left: 2%;
     }
   }
   #deskFourthDiv {
-    height:70vh;
+   
     background:white;
     font-family:$robo;
 
@@ -411,6 +441,7 @@ left: 2%;
         font-family:$fran;
         text-align:left;
         padding:1%;
+        margin-bottom:4%;
        ;
         &:hover{
           color:white;
@@ -426,15 +457,16 @@ left: 2%;
          
           padding:1%;
           text-align:center;
-          border-bottom:1px solid black;
+          border-bottom:3px solid black;
           font-family:$fran;
         }
         #projectContentLink{
           color:black;
           font-size:2.0em;
           padding:1%;
-          border-bottom:1px solid black;
+          border-bottom:3px solid black;
           font-family:$fran;
+          text-align:center;
 
           #projectContentLinkContent{
             
@@ -477,7 +509,7 @@ left: 2%;
   }
 
   #deskFifthDiv {
-    height:50vh;
+    
      font-family:$robo;
     color:white;
 
@@ -527,6 +559,16 @@ left: 2%;
     }
 
   }
+}
+
+
+
+#mobileWarning{
+  background:white;
+  height:50vh;
+  margin-top:10%;
+  font-size:2em;
+  font-style:$fran;
 }
 .highLightBlack {
   background:white;

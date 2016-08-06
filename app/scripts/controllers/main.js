@@ -10,12 +10,12 @@
 angular.module('newoscarApp')
   .controller('MainCtrl', function ($scope) {
     	
-    	$scope.skills = [{'name':'HTML','level':80},
+    	$scope.skills = [{'name':'HTML','level':90},
     					 {'name':'CSS','level':70},
     					 {'name':'Javascript','level':70},
-    					 {'name':'AngularJS','level':50},
+    					 {'name':'AngularJS','level':60},
     					 {'name':'Adobe Creative Suite','level':60},
-    					 {'name':'','level':0}
+    					 {'name':'Ruby','level':40}
 
     				];
 
