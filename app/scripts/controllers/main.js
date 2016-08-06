@@ -84,6 +84,14 @@ angular.module('newoscarApp')
    			
    			{'name':'AtaByte Hosting','web':'http://jared2.theBigOh.net','framework':'AngularJS','img':'images/screen/kondiScreen.png','descs':['Doing a layout for my friend\'s webhosting company','Fully responsive in different displays.','Made in AngularJS which made it a breeze',],'done':true}
    		];
+
+   		$scope.salesLinks = [
+   				{'type':'Email','link':'mailTo:oscar@thebigoh.net','img':'../images/mail.png','text':'Oscar@TheBigOh.Net'},
+   				{'type':'LinkedIn','link':'http://linkedin.com/in/oscarmedrano','img':'../images/linkedin.png','text':'Oscar Medrano'},
+   				{'type':'Github','link':'https://github.com/ohmedrano','img':'../images/gitLit.png','text':'OhMedrano'}
+
+   		];
+
    		$scope.pro = $scope.projects[0];
    		$scope.projectSwap = 0; 
    		$scope.changeSwap = function(){

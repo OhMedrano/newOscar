@@ -29,15 +29,22 @@
      </div>
      <div id='deskSecondDiv'class='col-md-12 col-lg-12'style=''>
           <div id='deskAbout'class='col-md-10 col-lg-10 col-md-offset-1'style=''>
+            <div id='deskAboutTitle'class='col-md-2 col-lg-2'style=''>
+              <div id='deskAboutAbout'class='col-md-12 col-lg-12'style=''>
+                About
+              
+              </div>
+              <div id='deskAboutPic'class='col-md-12 col-lg-12'style=''>
+              
+              
+              </div>
             
+            </div>
             <div id='deskAboutContent'class='col-md-10 col-lg-10'style=''>
             Blah blah blah blah blah
             
             </div>
-            <div id='deskAboutTitle'class='col-md-2 col-lg-2'style=''>
-            About Me
             
-            </div>
           
           </div>
      
@@ -46,11 +53,11 @@
         <div ng-init='skillSwap = false;'id='deskSkillExp'class='col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1'style=''>
             
             <div id='expSwap'class='col-md-12 col-lg-12'style=''>
-                <div id=''class='col-md-6 col-lg-6 expSwapClass'style=''ng-click='skillSwap = false'>
+                <div id=''class='col-md-6 col-lg-6 expSwapClass'style=''ng-click='skillSwap = false'ng-class='{highLightBlack: skillSwap == false}'>
                     Skills
                 
                 </div>
-                <div id=''class='col-md-6 col-lg-6 expSwapClass'style=''ng-click='skillSwap = true'>
+                <div id=''class='col-md-6 col-lg-6 expSwapClass'style=''ng-click='skillSwap = true'ng-class='{highLightBlack: skillSwap == true}'>
                   Experience
                 
                 </div>
@@ -125,16 +132,16 @@
      </div>
      <div id='deskFourthDiv'class='col-md-12 col-lg-12'style=''>
         <div id='deskProject'class='col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1'style=''>
-           <div id='deskProjectHead'class='col-md-12 col-lg-12'style=''>
-              <div id='deskProjectHeader'class='col-md-3 col-lg-3'style=''>
+          
+           <div id=''class='col-md-2 col-lg-2 'style='padding:1%;'>
+             <div id='deskProjectHead'class='col-md-12 col-lg-12'style=''>
+              <div id='deskProjectHeader'class='col-md-12 col-lg-12'style=''>
               Projects
               
               </div>
         
             </div>
-           <div id=''class='col-md-9 col-lg-9 col-md-offset-3 col-lg-offset-3'style=''>
-
-             <div ng-repeat='project in projects'id=''class='col-md-2 col-lg-2 projectMenu'style=''ng-click='changeSwap(project)'>
+             <div ng-repeat='project in projects'id=''class='col-md-12 col-lg-12 projectMenu'style=''ng-click='changeSwap(project)'>
             {{project.name}}
             
             
@@ -142,31 +149,36 @@
            
            </div>
 
-           <div ng-init=''id='deskProjectContent'class='col-md-12 col-lg-12'style=''>
-                <div id=''class='col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1'style=''>
+           <div ng-init=''id='deskProjectContent'class='col-md-offset-1 col-lg-offset-1 col-md-8 col-lg-8'style=''>
+                <div id=''class='col-md-12 col-lg-12 'style=''>
                     <div id='projectContentName'class='col-md-6 col-lg-6'style=''>
                     {{pro.name}}
                     
                     </div>
                     <a ng-href='{{pro.web}}'id='projectContentLink'class='col-md-6 col-lg-6'style=''>
-                      <div id='projectContentLinkContent'class='col-md-6 col-lg-6'style=''>
+                      <div id='projectContentLinkContent'class='col-md-8 col-lg-8'style=''>
                       Check It Out Here
                       
                       </div>
                     
                     </a>
+                   
+                    <div id='projectContentText'class='col-md-6 col-lg-6'style=''>
 
-                    <div id='projectContentText'class='col-md-12 col-lg-12'style=''>
-                      <div ng-repeat='desc in pro.descs'id=''class='col-md-4 col-lg-4 innerText'style=''>
-                        <div id=''class='col-md-9 col-lg-9'style=''>
+                      <div ng-repeat='desc in pro.descs'id=''class='col-md-12 col-lg-12 innerText'style=''>
+                        <div id=''class='col-md-12 col-lg-12'style=''>
                            {{desc}}
                         
                         </div>
                         
                       
                       </div>
-                    
+                     
                     </div>
+                    <div id='innerPic'class='col-md-5 col-lg-5 col-md-offset-1 col-lg-offset-1'style='background:url({{pro.img}})no-repeat;background-size:100% 100%;'>
+                      
+                      
+                      </div>
 
 
                   
@@ -183,16 +195,42 @@
      </div>
      <div id='deskFifthDiv'class='col-md-12 col-lg-12'style=''>
         <div id='deskContact'class='col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1'style=''>
-            <div id=''class='col-md-12 col-lg-12'style=''>
-              <div id=''class='col-md-12 col-lg-12'style=''>
-                
+            <div id='deskContactHeader'class='col-md-12 col-lg-12'style=''>
+              <div id='headerText'class='col-md-2 col-lg-2'style=''>
+                Let's team up
               
               </div>
 
 
             
             </div>
+           <div id='deskContactContent'class='col-md-12 col-lg-12'style=''>
+            <div id='salesPitch'class='col-md-8 col-lg-8'style=''>
+              If you have any questions or want to team up on a project or even want to jam out on guitars, hit me up. 
+            
+            </div>
+            <div id='salesLinks'class='col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2'style=''>
+              <div ng-repeat='link in salesLinks'id='linked'class='col-md-7 col-lg-7'style=''>
+                <a href="{{link.link}}"class='col-md-12 col-lg-12'>
+                  
+
+                  <div id='linkImg'class='col-md-3'style='background:url({{link.img}})no-repeat;background-size:contain;'>
+                  
+                
+                </div>
+                <div id=''class='col-md-8 col-lg-8'style=''>
+                {{link.text}}
+                
+                </div>
+                </a>
+              
+              
+              </div>
+              
+
+            </div>
            
+           </div>
         
         </div>
      

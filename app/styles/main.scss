@@ -2,6 +2,12 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 // bower:scss
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
+@import 'https://fonts.googleapis.com/css?family=Cantarell:400i|Francois+One|Roboto';
+
+$fran : 'Francois One', sans-serif;
+$cant : 'Cantarell',sans-serif;
+$robo : 'Roboto',sans-serif;
+
 
 /*CSS RESET*/
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -68,6 +74,7 @@ body {
   padding: 0;
 
  background:url(/images/pattern.svg)repeat, black;
+ background-size:100%;
   
 }
 
@@ -150,6 +157,10 @@ body {
 
 /*RAW CSS BEFORE RESPONSIVE*/
 
+
+
+
+
 #deskMain {
   #deskFirstDiv {
     height:100vh;
@@ -212,21 +223,33 @@ left: 2%;
   }
   #deskSecondDiv{
     height:50vh;
-    background:white;
+    background:#FFF9F8;
 
     #deskAbout{
       padding:1%;
       
-      background:white;
+      background:#FFF9F8;
       height:100%;
 
       #deskAboutTitle {
         font-size:2.0em;
-
+        font-family:$fran;
       }
 
       #deskAboutTitle {
-        border:1px solid black;
+         height:100%;
+
+         #deskAboutAbout {
+            border-bottom:3px solid black;
+            
+         }
+
+         #deskAboutPic {
+          background:url(/images/mainFace.jpg)no-repeat;
+          background-size:cover;
+          height:80%;
+          opacity: 0.9;
+         }
       }
 
     }
@@ -239,35 +262,41 @@ left: 2%;
 
 
     #deskSkillExp {
-      border:1px solid white;
+      
       height:100%;
-      background:black;
+      background:rgba(0,0,0,0.70);
       padding:2%;
 
       #expSwap {
         border:1px solid black;
         margin-bottom:2%;
         font-size:2.2em;
+        font-family: $fran;
 
         .expSwapClass {
-          color:white;
+          
           text-align:center;
+          border:3px solid white;
         
           &:hover{
-            background:white;
+            background:#FFF9F8;
             color:black;
+            cursor:pointer;
           }
 
         }
       }
 
       #deskSkills {
-        border:1px solid white;
+        
         padding:3%;
 
         .deskSkill {
           height:10vh;
-          border:1px solid white;
+          
+          font-family:$robo;
+          font-size:1.2em;
+          font-weight:bold;
 
           .expBarName {
             border-bottom:1px solid white;
@@ -295,14 +324,15 @@ left: 2%;
       height:80%;
 
        #deskExps {
-        border:1px solid white;
+        font-family:$robo;
         height:100%;
 
 
         .workOut {
-          border:1px solid white;
+          border-top:4px solid white;
+          border-bottom:4px solid white;
           height:100%;
-          padding:1%;
+          padding:3%;
           padding-top:4%;
 
           #workName{
@@ -310,16 +340,18 @@ left: 2%;
             margin-bottom:2%;
             font-size:2em;
             font-weight:bolder;
+            font-family:$fran;
           }
 
           #workPosition{
             margin-bottom:1%;
             font-size:1.6em;
+            font-family:$cant;
           }
 
 
           #workDates {
-            margin-bottom:3%;
+            margin-bottom:8%;
             padding:0;
 
             .workDate {
@@ -331,7 +363,8 @@ left: 2%;
             padding:1%;
 
               #workRespon {
-                margin-bottom:2%;
+                margin-bottom:5%;
+                font-size:1.4em;
               }
 
 
@@ -351,19 +384,21 @@ left: 2%;
     }
   }
   #deskFourthDiv {
-    height:50vh;
+    height:70vh;
     background:white;
+    font-family:$robo;
 
     #deskProject {
-      border:1px solid black;
+     
       height:100%;
       background:white;
 
      #deskProjectHead {
         padding:1%;
        #deskProjectHeader {
-        border-bottom:1px solid black;
+        border-bottom:3px solid black;
         font-size:2.2em;
+        font-family: $fran;
       }
 
      }
@@ -371,10 +406,10 @@ left: 2%;
       .projectMenu {
         
         display:inline;
-        font-size:1.2em;
+        font-size:2.0em;
         cursor:pointer;
-        
-        text-align:center;
+        font-family:$fran;
+        text-align:left;
         padding:1%;
        ;
         &:hover{
@@ -385,17 +420,21 @@ left: 2%;
 
 
       #deskProjectContent {
-
+        font-family:$robo;
         #projectContentName{
           font-size:2.0em;
-          font-weight:bold;
+         
           padding:1%;
           text-align:center;
+          border-bottom:1px solid black;
+          font-family:$fran;
         }
         #projectContentLink{
           color:black;
           font-size:2.0em;
           padding:1%;
+          border-bottom:1px solid black;
+          font-family:$fran;
 
           #projectContentLinkContent{
             
@@ -409,18 +448,24 @@ left: 2%;
 
           }
         }
-
+      
         #projectContentText {
-          border-top:1px solid black;
-
-
+          
+          padding:1%;
+         
           .innerText{
             font-size:1.4em;
-            
+            margin-bottom:4%;
             line-height:1.2;
 
           }
+          
         }
+         #innerPic {
+            height:35vh;
+            margin-top:1%;
+
+          }
 
 
       }
@@ -433,14 +478,58 @@ left: 2%;
 
   #deskFifthDiv {
     height:50vh;
-     
-    
+     font-family:$robo;
+    color:white;
 
 
     #deskContact {
       height:100%;
       background:black;
+
+      #deskContactHeader {
+        #headerText{
+          border-bottom:3px solid white;
+           font-size:2.2em;
+        font-family: $fran;
+        }
+      }
+      #deskContactContent{
+        position:relative;
+        top:2%;
+        padding:2%;
+        #salesPitch {
+          font-family:$fran;
+          font-size:2.0em;
+
+        }
+        #salesLinks {
+          margin-top:2%;
+
+          a{
+            color:white;
+          }
+
+          #linked{
+            color:white;
+            font-family:$fran;
+            font-size:2.1em;
+            cursor:pointer;
+
+            #linkImg{
+              height:10vh;
+            }
+
+          }
+        }
+      }
+
+
     }
 
   }
+}
+.highLightBlack {
+  background:white;
+  color:black;
+
 }
