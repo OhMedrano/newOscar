@@ -13,9 +13,9 @@ angular.module('newoscarApp')
     	$scope.skills = [{'name':'HTML','level':90},
     					 {'name':'CSS','level':70},
     					 {'name':'Javascript','level':70},
-    					 {'name':'AngularJS','level':60},
-    					 {'name':'Adobe Creative Suite','level':60},
-    					 {'name':'Ruby','level':40}
+    					 {'name':'AngularJS','level':80},
+    					 {'name':'Adobe CS','level':75},
+    					 {'name':'Ruby','level':50}
 
     				];
 
@@ -25,7 +25,7 @@ angular.module('newoscarApp')
   				{'name':'Freelance IT',
   					'position':'Technician',
   				 'location':'New York',
-  				  'startDate':'August 1, 2014',
+  				  'startDate':'Aug. 1, 2014',
   				  'endDate':'NA',	
   				  'present':true,
   				 'respon':[
@@ -39,7 +39,7 @@ angular.module('newoscarApp')
   				 {'name':'Konditori',
   				 	'position':'Barista',
   				 'location':'New York',
-  				  'startDate':'October 14, 2013',
+  				  'startDate':'Oct. 14, 2013',
   				  'endDate':'NA',	
   				  'present':true,
   				 'respon':[
@@ -53,7 +53,7 @@ angular.module('newoscarApp')
   				 {'name':'CitiGroup',
   				 'position':'Intern System Adminstrator',
   				 'location':'New York',
-  				  'startDate':'March 2014',
+  				  'startDate':'Mar. 2014',
   				  'endDate':'June 2014',	
   				  'present':false,
   				 'respon':[

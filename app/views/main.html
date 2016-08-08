@@ -153,7 +153,7 @@
            <div id=''class='col-md-2 col-lg-2 'style='padding:1%;'>
              <div id='deskProjectHead'class='col-md-12 col-lg-12'style=''>
               <div id='deskProjectHeader'class='col-md-12 col-lg-12'style=''>
-              Projects
+              <h3>Projects</h3>
               
               </div>
         
@@ -173,7 +173,7 @@
                     
                     </div>
                     <a ng-href='{{pro.web}}'id='projectContentLink'class='col-md-6 col-lg-6'style=''>
-                      <div id='projectContentLinkContent'class='col-md-8 col-lg-8'style=''>
+                      <div id='projectContentLinkContent'class='col-md-12 col-lg-12'style=''>
                       Check It Out Here
                       
                       </div>
@@ -192,10 +192,13 @@
                       </div>
                      
                     </div>
-                    <div id='innerPic'class='col-md-5 col-lg-5 col-md-offset-1 col-lg-offset-1'style='background:url({{pro.img}})no-repeat;background-size:100% 100%;'>
+                   <div id=''class='col-md-5 col-lg-5'style=''>
+                     <div id='innerPic'class='col-md-12 col-lg-12'style='background:url({{pro.img}})no-repeat;background-size:100% 100%;'>
                       
                       
                       </div>
+                   
+                   </div>
 
 
                   
@@ -255,17 +258,208 @@
   </div>
 
   <!-- MOBILE -->
-  <div id=''class='hidden-md hidden-lg'style=''>
+  <div id='mobileMain'class='hidden-md hidden-lg'style=''>
     
-      <div id='mobileWarning'class='col-xs-12 col-sm-12'style=''>
-        <h3>Currently being redesigned</h3>
+    <div id='mobileFirst'class='col-xs-12 col-sm-12'style=''>
+        <div id='pattern'class='col-xs-12 col-sm-12'style=''>
+          <div id='logo'class='col-xs-12 col-sm-12'style=''>
+          
+          
+          </div>
+          <div id='name'class='col-xs-8 col-sm-8'style=''>
+          
+          
+          </div>
+          <div id='position'class='col-xs-12 col-sm-12'style=''>
+          
+          
+          </div>
 
-        If you're looking for the guitar app I made, 
-        <br><br>
-        <a href='http://guitar.thebigoh.net'>Here</a>
+        
+        </div>
+    
+    </div>
+
+
+
+    <div id='mobileSecond'class='col-xs-12 col-sm-12'style=''>
+      <div id='aboutTitle'class='col-xs-8 col-sm-8'style=''>
+      About
+      
+      </div>
+      
+      <div id='aboutContent'class='col-xs-12 col-sm-12'style=''>
+         <p>Solving problems using creative solutions is something I excel at.<br><br>
+
+                  I am able to write in JavaScript, read CSS with ease, repair your computer with no hesitation, all while playing Eruption on one of my several guitars. <br><br>
+
+                  I am also familiar with frameworks such as AngularJS, Ember, NodeJS, and Rails.
+
+                  </p>
+      
+      </div>
+      <div id='aboutPic'class='col-xs-6 col-sm-6'style=''>
+      
+      
+      </div>
+    
+    </div>
+
+    <div id='mobileThird'class='col-xs-12 col-sm-12'style=''ng-init='mobileSwap = true'>
+        <div id='swapSelection'class='col-xs-12 col-sm-12'style=''>
+              <div id=''class='col-xs-6'style=''ng-class='{highLightBlack:false == mobileSwap}'ng-click='mobileSwap = false'>
+                Skills
+              
+              </div>
+              <div id=''class='col-xs-6'style=''ng-class='{highLightBlack:true == mobileSwap}'ng-click='mobileSwap = true'>
+                Exp.
+              
+              </div>
+        
+        </div>
+
+        <div ng-if='mobileSwap == false' id='mobileSkills'class='col-xs-12 col-sm-12'style=''>
+          <div ng-repeat='skill in skills'id=''class='col-xs-12 skiller'style=''>
+            <div id=''class='col-xs-8 name'style=''>
+              {{skill.name}}
+            
+            </div>
+            <div id=''class='col-xs-12 skillBar'style=''>
+              <div id=''class='col-xs-12 bar'style='width:{{skill.level}}%'>
+              
+              
+              </div>
+            
+            </div>
+          
+          
+          </div>
+        
+        </div>
+
+
+        <div ng-if='mobileSwap == true' id='mobileExp'class='col-xs-12 col-sm-12'style=''>
+          <div ng-repeat='work in workHist'id=''class='working col-xs-12'style=''>
+            <div id=''class='col-xs-12 workTop'style=''>
+              <div id=''class='col-xs-12 workName'style=''>
+              {{work.name}}
+              
+              </div>
+              <div ng-if='work.present == true'id=''class='workDate col-xs-12 col-sm-12'style=''>
+              <span class='col-xs-6'>{{work.startDate}}</span> 
+              <span class='col-xs-6'> -    Present</span>
+              
+              </div>
+              <div ng-if='work.present == false'id=''class='workDate col-xs-12 col-sm-12'style=''>
+              <span class='col-xs-6'>{{work.startDate}} -</span> 
+              <span class='col-xs-6'> {{work.endDate}}</span>
+              
+              </div>
+            
+            </div>
+            <div id=''class='col-xs-12 col-sm-12 workMid'style=''>
+              <div id=''class='workPosition col-xs-12 col-sm-12'style=''>
+              {{work.position}}
+              
+              </div>
+              <div id=''class='workRespon col-xs-12 col-sm-12'style=''>
+                <div ng-repeat='resp in work.respon'id=''class='col-xs-12 col-sm-12 repond'style=''>
+                  {{resp}}
+                
+                
+                </div>
+              
+              </div>
+            
+            </div>
+          
+          
+          </div>
+        
+        </div>
+    
+    </div>
+
+    <div id='mobileFourth'class='col-xs-12 col-sm-12'style=''>
+      <div id='title'class='col-xs-8 col-sm-8'style=''>
+        Projects
+      
+      </div>
+      <div id='menu'class='col-xs-12 col-sm-12'style=''>
+        <div ng-repeat='project in projects'id=''class='col-xs-6 projectMenu'style='' ng-click='changeSwap(project)'ng-class='{highLightWhite:$index == projectSwap}'>
+          {{project.name}}
+        
+        
+        </div>
       
       </div>
 
+      <div id='content'class='col-xs-12 col-sm-12'style=''>
+        <div id='name'class='col-xs-12 col-sm-12'style=''>
+          {{pro.name}}
+        
+        </div>
+        <div id='text'class='col-xs-12 col-sm-12'style=''>
+        <div ng-repeat='des in pro.descs 'id=''class='col-xs-12 decs'style=''>
+          {{des}}
+        
+        
+        </div>
+        
+        </div>
+        <div id='image'class='col-xs-12 col-sm-12'style=''>
+          <div id=''class='col-xs-12 col-sm-12 img'style='background:url({{pro.img}})no-repeat;background-size:100%;'>
+          
+          
+          </div>
+
+          <div id='link'class='col-xs-12 col-sm-12'style=''>
+            <a href='{{pro.link}}'>Check it out </a>  
+          
+          </div>
+        
+        </div>
+
+
+        
+      </div>
+    </div>
+
+    <div id='mobileFifth'class='col-xs-12 col-sm-12'style=''>
+      <div id='title'class='col-xs-8 col-sm-8'style=''>
+        Contact 
+      
+      </div>
+
+      <div id='text'class='col-xs-12 col-sm-12'style=''>
+      If you have any questions or want to team up for a project, or even just jam. You can contact me through: </div>
+
+
+      <div id='contact'class='col-xs-12 col-sm-12'style=''>
+        <div ng-repeat='saleLink in salesLinks'id=''class='sale col-xs-12 col-sm-12'style=''>
+          <a ng-href='{{saleLink.link}}'class='col-xs-12 col-sm-12'style=''>
+
+            <div id=''class='col-xs-4 col-sm-4 linkImage'style='background:url({{saleLink.img}})no-repeat;background-size:100%'>
+          
+          
+          </div>
+          <div id=''class='col-xs-8 col-sm-8 linkText'style=''>
+            {{saleLink.text}}
+          
+          </div>
+
+          </a>
+        
+        
+        
+        </div>
+
+      
+      </div>
+      
+      </div>
+    
+    </div>
 
   
   </div>

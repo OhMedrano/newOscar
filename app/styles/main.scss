@@ -162,6 +162,7 @@ body {
 
 
 #deskMain {
+  padding:0;
   #deskFirstDiv {
     height:100vh;
     
@@ -172,11 +173,11 @@ body {
       
 
     #deskPattern {
-     background:url(/images/pattern.svg)repeat;
+     background:url(/images/pattern.svg)repeat,rgba(0,0,0,0.2);
       height:100%;
-     
+     background-size:100% 100%;
 
-
+     padding:0;
       #deskLogo {
      background: url(/images/titleLogo.png) no-repeat;
 background-size: 100% 100%;
@@ -422,12 +423,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', end
      
       height:100%;
       background:white;
+      margin-bottom:2%;
 
      #deskProjectHead {
         padding:1%;
        #deskProjectHeader {
         border-bottom:3px solid black;
-        font-size:2.2em;
+        font-size:4em;
         font-family: $fran;
       }
 
@@ -453,7 +455,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', end
       #deskProjectContent {
         font-family:$robo;
         #projectContentName{
-          font-size:2.0em;
+          font-size:4.0em;
          
           padding:1%;
           text-align:center;
@@ -462,7 +464,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', end
         }
         #projectContentLink{
           color:black;
-          font-size:2.0em;
+          font-size:4.0em;
           padding:1%;
           border-bottom:3px solid black;
           font-family:$fran;
@@ -494,7 +496,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', end
           
         }
          #innerPic {
-            height:35vh;
+            height:30vh;
             margin-top:1%;
 
           }
@@ -514,10 +516,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', end
     color:white;
 
 
+
     #deskContact {
       height:100%;
       background:black;
-
+      padding:1%;
       #deskContactHeader {
         #headerText{
           border-bottom:3px solid white;
@@ -561,17 +564,299 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', end
   }
 }
 
+#mobileMain {
+    padding:0;
+
+    #mobileFirst{
+      background:url(/images/nyc2.jpg)no-repeat;
+      background-size:100% 100%;
+      height:100vh;
+      padding:0;
+
+        #pattern {
+          background:url(/images/pattern.svg)repeat,rgba(0,0,0,0.4);
+          background-size:100% 100%;
+          height:100%;
+          padding:0;
+          position:relative;
+          z-index:10;
+
+          #logo {
+            height:70%;
+            background:url(/images/titleLogo.png)no-repeat;
+            background-size:contain;
+            opacity:0.9;
+            position:relative;
+            z-index:11;
+            top:20%;
+            margin-bottom:2%;
+          }
+          #name{
+            height:10%;
+            background:url(/images/titleName.png)no-repeat;
+            background-size:contain;
+            float:right;
+
+          }
+          #position{
+            height:20%;
+            background:url(/images/titlePosition.png)no-repeat;
+            background-size:contain;
+          }
+        }
 
 
-#mobileWarning{
-  background:white;
-  height:50vh;
-  margin-top:10%;
-  font-size:2em;
-  font-style:$fran;
+    }
+
+    #mobileSecond {
+      background:#fff;
+      height:100vh;
+      padding:0;
+      font-family:$robo;
+      #aboutTitle{
+        font-size:4em;
+        font-family:$fran;
+        border-bottom:5px solid black;
+
+      }
+      #aboutPic{
+        background: url(/images/mainFace.jpg) no-repeat;
+background-size: 120% 100%;
+height: 42%;
+float: right;
+      }
+      #aboutContent{
+        font-size:1.5em;
+        line-height:1.2;
+      }
+
+
+
+    }
+
+
+    #mobileThird{
+      background:rgba(0,0,0,0.8);
+      height:100.5vh;
+      color:white;
+      padding:0;
+
+      #swapSelection {
+        padding-top:4%;
+        margin-bottom:10%;
+        div{
+          border:3px solid white;
+        font-family:$fran;
+        font-size:2em;
+        text-align:center;
+        }
+       
+      }
+       #mobileSkills {
+          font-size:3em;
+          font-family:$fran;
+          
+          .skiller{
+            height:10vh;
+            margin-bottom:5%;
+           .name{
+            border-bottom:3px solid white;
+            margin-bottom:2%;
+           }
+            .skillBar{
+              padding:0;
+              height:40%;
+              background:white;
+              border:3px solid white;
+              .bar{
+                background:black;
+                height:100%;
+              }
+            }
+          } 
+        }
+
+        #mobileExp {
+          
+          font-family:$robo;
+          padding:0;
+          .working{
+            margin-bottom:5%;
+            padding:0;
+            .workTop{
+              padding:0;
+              margin-bottom:2%;
+               .workName{
+              font-family:$fran;
+              font-size:1.5em;
+              border-bottom:3px solid white;
+              margin-bottom:2%;
+            }
+              .workDate{
+                font-family:$cant;
+                font-size:1.3em;
+                text-align:center;
+              }
+            }
+
+            .workMid{
+              margin-bottom:3%;
+                .workPosition{
+                  font-family:$fran;
+                  font-size:1.5em;
+                  margin-bottom:2%;
+                }
+
+                .workRespon{
+                  font-size:1.1em;
+                  .repond{
+                    margin-bottom:1%;
+                  }
+                }
+            }
+          }
+        }
+
+    }
+
+    #mobileFourth{
+      height:100vh;
+      background:#fff;
+
+      #title {
+        font-size:3em;
+        border-bottom:4px solid black;
+        font-family:$fran;
+        padding-top:2%;
+      }
+
+      #menu {
+        margin-top:3%;
+        .projectMenu {
+          height:5vh;
+          padding:2%;
+          border:3px solid black;
+          font-family:$fran;
+        }
+
+      }
+
+      #content {
+        margin-top:3%;
+
+        #name{
+          font-size:2em;
+          font-family:$fran;
+          text-align:right;
+          border-bottom:4px solid black;
+        }
+        #text{
+          font-size:1em;
+          line-height:1.1;
+          height:30vh;
+          padding-top:4%;
+          margin-bottom:1%;
+          .decs {
+
+            margin-bottom:2%;
+          }
+        }
+        #image {
+          
+          height:30vh;
+          padding:2%;
+            .img{
+              height:100%;
+              background-size:100% 100%;
+              margin-bottom:5%;
+            }
+            #link {
+              font-size:2em;
+              font-family:$fran;
+
+              a{
+                color:black;
+
+
+              }
+            }
+        }
+      }
+
+    }
+
+    #mobileFifth {
+
+      height:100vh;
+      background:black;
+      color:white;
+      font-family:$robo;
+      #title{
+        font-family:$fran;
+        font-size:3em;
+        border-bottom:4px solid white;
+        margin-bottom:4%;
+
+
+      }
+
+      #text {
+        font-size:1.5em;
+        margin-bottom:3%;
+
+      }
+
+      #contact {
+       
+        .sale {
+          height:20vh;
+          font-family:$fran;
+          padding:0;
+          a {
+            color:white;
+            height:100%;
+            padding:0;
+
+          .linkImage{
+            height:100%;
+          }
+          .linkText {
+            font-size:1.5em;
+            padding-top:15%;
+          }
+
+
+
+          }
+
+
+        }
+      }
+
+
+    }
+
+
+
+
+
+
+
+
+
 }
+
+
+
+
+
+
 .highLightBlack {
   background:white;
   color:black;
 
+}
+.highLightWhite {
+  background:black;
+  color:white;
 }
